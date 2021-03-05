@@ -23,7 +23,6 @@ const IndexPage: React.FC<PageProps<DataProps>> = () => (
     </CalloutRibbon>
     <ServicesSection />
     <Testimonials />
-    <p>Latest Blog</p>
   </>
 )
 
