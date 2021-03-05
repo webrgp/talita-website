@@ -2,17 +2,11 @@ import * as React from "react"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-interface IMeta {
-  name?: String,
-  content?: String,
-  property?: String,
-}
-
 interface ISEO {
-  title: String,
-  description?: String,
-  lang?: String,
-  meta?: Array<IMeta>
+  title?: string,
+  description?: string,
+  lang?: string,
+  meta?: Array<any>
 }
 
 const SEO: React.FC<ISEO> = ({ title, description = ``, lang = `en`, meta=[] }) => {
@@ -39,7 +33,7 @@ const SEO: React.FC<ISEO> = ({ title, description = ``, lang = `en`, meta=[] }) 
         lang,
       }}
       title={title}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
+      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : ''}
       meta={[
         ...meta,
         {
