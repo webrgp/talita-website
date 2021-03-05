@@ -2,7 +2,20 @@ import * as React from "react"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description = ``, lang = `en`, meta = [], title = `` }) {
+interface IMeta {
+  name?: String,
+  content?: String,
+  property?: String,
+}
+
+interface ISEO {
+  title: String,
+  description?: String,
+  lang?: String,
+  meta?: Array<IMeta>
+}
+
+const SEO: React.FC<ISEO> = ({ title, description = ``, lang = `en`, meta=[] }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -28,6 +41,7 @@ function SEO({ description = ``, lang = `en`, meta = [], title = `` }) {
       title={title}
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
       meta={[
+        ...meta,
         {
           name: `description`,
           content: metaDescription,
@@ -60,7 +74,7 @@ function SEO({ description = ``, lang = `en`, meta = [], title = `` }) {
           name: `twitter:description`,
           content: metaDescription,
         },
-      ].concat(meta)}
+      ]}
     />
   )
 }

@@ -9,7 +9,7 @@ const Testimonials: React.FC = () => {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
 
   const { testimonials } = testimonialData
-  console.log(testimonials);
+
   return (
     <section className="Testimonials">
       <header>
