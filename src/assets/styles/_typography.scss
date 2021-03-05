@@ -1,0 +1,53 @@
+@font-face {
+  font-family: Jost;
+  src: url("../fonts/Jost-Light.ttf");
+}
+@font-face {
+  font-family: Jost;
+  font-style: italic;
+  src: url("../fonts/Jost-LightItalic.ttf");
+}
+@font-face {
+  font-family: Jost;
+  font-weight: bold;
+  src: url("../fonts/Jost-SemiBold.ttf");
+}
+@font-face {
+  font-family: Jost;
+  font-style: italic;
+  font-weight: bold;
+  src: url("../fonts/Jost-SemiBoldItalic.ttf");
+}
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html {
+  font-family: 'Jost', sans-serif;
+  color: var(--black);
+}
+p, li {
+  letter-spacing: 0.5px;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-weight: normal;
+  color: var(--red);
+  margin: 0;
+}
+a {
+  color: var(--black);
+  text-decoration-color: var(--red);
+  /* Chrome renders this weird with this font, so we turn it off */
+  text-decoration-skip-ink: none;
+}
+mark, .mark {
+  background: var(--yellow);
+  padding: 0 2px 2px 2px;
+  margin: 0;
+  display: inline;
+  line-height: 1;
+}
+
+.center {
+  text-align: center;
+}
