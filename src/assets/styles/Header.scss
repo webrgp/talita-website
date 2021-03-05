@@ -1,0 +1,78 @@
+@import 'variables';
+
+// Configuration
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+
+.Header {
+
+  &--logo-container {
+    display: block;
+    position: relative;
+    background-image: radial-gradient(50% 488%, #FDFDFD, #ABABAA);
+    padding: 1.5rem;
+
+    a {
+      position: relative;
+      display: block;
+      z-index: 555;
+    }
+
+    img {
+      display: block;
+      max-width: 362px;
+      margin: 0 auto;
+    }
+  }
+
+  .navbar-toggler {
+    padding: 0;
+    box-shadow: none;
+    margin: 1rem 0;
+
+    &:focus {
+      outline: none;
+    }
+
+    .navbar-toggler-icon {
+      position: relative;
+      height: 3px;
+      background-color: rgba(255, 255, 255, .9);
+      border-radius: 10px;
+
+      &:before,
+      &:after {
+        content: "";
+        display: block;
+        height: 3px;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, .9);
+        margin-top: -10px;
+      }
+
+      &:after {
+        margin-top: 17px;
+      }
+    }
+  }
+
+  nav.navbar {
+    background-color: $red;
+
+    .nav-link {
+      font-weight: bold;
+      color: $white;
+      border-radius: 4px;
+
+      &:hover {
+        color: $white;
+        background-color: rgba(255, 255, 255, .2);
+      }
+    }
+  }
+
+
+
+}
