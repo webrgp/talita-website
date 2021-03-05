@@ -22,7 +22,7 @@ const CTACard = ({icon, children}: CTACardProps) => (
 
 const CalloutChecklist: React.FC = () => {
   return (
-    <div className="CalloutChecklist">
+    <section className="CalloutChecklist">
       <div className="container-fluid container-lg">
         <div className="row">
           <CTACard icon={UsersSVG}>
@@ -39,7 +39,7 @@ const CalloutChecklist: React.FC = () => {
           </CTACard>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

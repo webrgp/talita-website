@@ -1,0 +1,35 @@
+@import 'variables';
+
+// Configuration
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+
+.CalloutRibbon {
+  background-color: $red;
+  padding: 2rem 0;
+
+  h3 {
+    color: $white;
+    margin: 0;
+  }
+
+  .col {
+    margin: 1rem auto;
+    text-align: center;
+  }
+
+  a.btn {
+    @include button-size(1rem, 1.25rem, 1.25rem, 1, 0);
+    @include button-variant($white, $red);
+    font-weight: bold;
+    color: $red;
+    border: 0;
+
+    &:hover {
+      color: $red;
+      background-color: rgba($white, .9);
+    }
+  }
+}

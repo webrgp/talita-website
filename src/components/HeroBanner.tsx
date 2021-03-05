@@ -10,7 +10,7 @@ interface Props {
 
 const HeroBanner: React.FC<Props> = ({ title }) => {
   return (
-    <div className="HeroBanner">
+    <section className="HeroBanner">
       <StaticImage
         src="../assets/images/home-cover.jpg"
         quality={100}
@@ -21,7 +21,7 @@ const HeroBanner: React.FC<Props> = ({ title }) => {
       <div className="HeroBanner--caption">
         <h2>{title}</h2>
       </div>
-    </div>
+    </section>
   )
 }
 
