@@ -68,7 +68,7 @@ const Footer: React.FC = () => (
       </div>
 
       <nav>
-        <Nav />
+        <Nav onLinkClick={null} />
       </nav>
 
       <div className="copy">

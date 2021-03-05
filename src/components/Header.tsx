@@ -14,7 +14,7 @@ const Header: React.FC = () => {
   return (
     <header className="Header">
       <div className="Header--logo-container">
-        <Link to="/">
+        <Link to="/" onClick={() => toggleOpen(false)}>
           <img src={LogoSVG} alt="Talita Camilo Professional Services Logo"/>
         </Link>
       </div>
@@ -24,7 +24,7 @@ const Header: React.FC = () => {
         </button>
         <div className={`navbar-collapse collapse ${isOpen ? "show" : ""}`} id="mainNavigation">
           <div className="container-md">
-            <Nav />
+            <Nav onLinkClick={() => toggleOpen(false)} />
           </div>
         </div>
       </nav>

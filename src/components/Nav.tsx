@@ -10,7 +10,11 @@ const navItems = [
   { url: `https://talitacamilo.clientportal.com`, title: `Client Portal`},
 ]
 
-const Nav = () => {
+interface INav {
+  onLinkClick: any
+}
+
+const Nav: React.FC<INav> = ({ onLinkClick }) => {
   return (
     <ul className="navbar-nav mr-auto m-md-auto">
       {navItems.map( item => (
@@ -18,7 +22,7 @@ const Nav = () => {
           {
             item.url.startsWith("http")
             ? <a href={item.url} target="_blank" rel="noreferrer noopener" className="nav-link">{item.title}</a>
-            : <Link to={item.url} className="nav-link">{item.title}</Link>
+            : <Link to={item.url} className="nav-link" onClick={onLinkClick}>{item.title}</Link>
           }
         </li>
       ))}
