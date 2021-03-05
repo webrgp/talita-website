@@ -1,0 +1,32 @@
+@import 'variables';
+
+// Configuration
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+
+.CalloutChecklist {
+  position: relative;
+  margin: 3rem 0;
+
+  .CTACard {
+
+    &--box {
+      text-align: center;
+    }
+
+    &--icon {
+      margin: 1rem auto;
+    }
+
+    &--content {
+      max-width: 300px;
+      margin: 0 auto;
+      h3 {
+        font-weight: bold;
+        color: $black;
+      }
+    }
+  }
+}
