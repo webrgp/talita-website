@@ -5,6 +5,8 @@ import SEO from "../components/SEO"
 import HeroBanner from "../components/HeroBanner"
 import CalloutChecklist from "../components/CalloutChecklist"
 import CalloutRibbon from "../components/CalloutRibbon"
+import ServicesSection from "../components/ServicesSection"
+import Testimonials from "../components/Testimonials"
 
 type DataProps = {
 }
@@ -19,8 +21,8 @@ const IndexPage: React.FC<PageProps<DataProps>> = () => (
     >
       Learn the Cost of your <strong>Accounting Solutions</strong> Right Now!
     </CalloutRibbon>
-    <p>Services Section</p>
-    <p>Testimonials</p>
+    <ServicesSection />
+    <Testimonials />
     <p>Latest Blog</p>
   </>
 )

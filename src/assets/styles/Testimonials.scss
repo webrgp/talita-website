@@ -1,0 +1,44 @@
+@import 'variables';
+
+// Configuration
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+
+.Testimonials {
+  background-color: $pink;
+  padding: 3rem 0;
+
+  header {
+    text-align: center;
+
+    h3 {
+      position: relative;
+      display: inline-block;
+      margin: 0;
+      font-size: 3rem;
+      color: $black;
+
+      &::before,
+      &::after {
+        position: absolute;
+        content: '';
+        display: block;
+        top: 5px;
+        width: 23px;
+        height: 20px;
+      }
+
+      &::before {
+        left: -40px;
+        background: url(../images/quote-left-duotone.svg) no-repeat left top;
+      }
+
+      &::after {
+        right: -40px;
+        background: url(../images/quote-right-duotone.svg) no-repeat left top;
+      }
+    }
+  }
+}
