@@ -1,11 +1,8 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.com">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9ead1c2e-d6d8-4259-95b0-358c0327b493/deploy-status)](https://app.netlify.com/sites/talita-website/deploys)
+
 <h1 align="center">
-  Gatsby's default starter
+  Talita Camilo PS Website
 </h1>
 
 Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
