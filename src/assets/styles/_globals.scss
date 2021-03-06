@@ -7,3 +7,24 @@
     font-size: 1.25rem;
   }
 }
+
+.btn-outline-red {
+  @include button-outline-variant($red);
+  @include button-size(1rem, 1.25rem, 1.25rem, 1, 0);
+  border-width: 3px;
+  font-weight: bold;
+}
+
+.btn-red {
+  @include button-variant($red, $white);
+  @include button-size(1rem, 1.25rem, 1.25rem, 1, 0);
+  border: 0;
+  font-weight: bold;
+}
+
+fieldset {
+
+  background-color: rgba($pink, .5);
+  padding: 2rem;
+
+}

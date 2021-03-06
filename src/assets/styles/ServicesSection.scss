@@ -42,11 +42,5 @@
   footer {
     margin: 3rem 0;
     text-align: center;
-    .btn-outline-red {
-      @include button-outline-variant($red);
-      @include button-size(1rem, 1.25rem, 1.25rem, 1, 0);
-      border-width: 3px;
-      font-weight: bold;
-    }
   }
 }
