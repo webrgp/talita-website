@@ -1,0 +1,21 @@
+@import 'variables';
+
+// Configuration
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+
+.LocationSection {
+
+  margin: 3rem 0;
+
+  a {
+    color: $black;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+}
