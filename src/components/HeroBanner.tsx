@@ -16,6 +16,8 @@ const HeroBanner: React.FC<Props> = ({ title }) => {
         quality={100}
         width={1400}
         formats={["auto", "webp", "avif"]}
+        loading="eager"
+        placeholder="blurred"
         alt="Talita Team Cover"
       />
       <div className="HeroBanner--caption">

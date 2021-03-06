@@ -1,0 +1,23 @@
+@import 'variables';
+
+// Configuration
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+
+.PageHeader {
+
+  margin: 2rem 0;
+
+  @include media-breakpoint-up(xl) {
+    margin: 2rem auto 4rem;
+    max-width: 1110px;
+  }
+
+  h1 {
+    font-weight: bold;
+    margin: 0 1rem 2rem;
+    text-align: center;
+  }
+}

@@ -8,10 +8,7 @@ import CalloutRibbon from "../components/CalloutRibbon"
 import ServicesSection from "../components/ServicesSection"
 import Testimonials from "../components/Testimonials"
 
-type DataProps = {
-}
-
-const IndexPage: React.FC<PageProps<DataProps>> = () => (
+const IndexPage: React.FC<PageProps> = () => (
   <>
     <SEO title="Home" />
     <HeroBanner title="We Are Here To Help" />

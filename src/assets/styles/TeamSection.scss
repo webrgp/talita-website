@@ -1,0 +1,29 @@
+@import 'variables';
+
+// Configuration
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+
+.TeamSection {
+  margin: 3rem auto;
+
+  .TeamCard {
+    margin: 2rem 0;
+    h4 {
+      color: $black;
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin: .75rem 0;
+      text-align: center;
+
+      small {
+        display: block;
+        font-size: .9rem;
+        font-weight: normal;
+        margin: .5rem 0;
+      }
+    }
+  }
+}
