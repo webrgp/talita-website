@@ -17,6 +17,9 @@ const Header: React.FC = () => {
         <Link to="/" onClick={() => toggleOpen(false)}>
           <img src={LogoSVG} alt="Talita Camilo Professional Services Logo"/>
         </Link>
+        <div className="particles-bg">
+          <div id="particles-js" />
+        </div>
       </div>
       <nav className="navbar navbar-dark justify-content-end  navbar-expand-md">
         <button className="navbar-toggler" type="button"  aria-controls="mainNavigation" aria-expanded={isOpen ? "true": "false"} aria-label="Toggle navigation" onClick={() => toggleOpen(!isOpen)}>
