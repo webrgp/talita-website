@@ -48,13 +48,13 @@ const Footer: React.FC = () => (
       </div>
       <div className="Footer--cards">
         <FooterCard icon={MapMarkerSVG}>
-          HYANNIS<br />
+          <a href="#">HYANNIS</a><br />
           100 West Main Street, Unit 2<br />
           Hyannis, MA - 02601<br />
           (508) 790-7014
         </FooterCard>
         <FooterCard icon={MapMarkerSVG}>
-          CHARLESTOWN<br />
+          <a href="#">CHARLESTOWN</a><br />
           529 Main Street Powerhouse Bldg<br />
           2nd floor, Room 239<br />
           Charlestown, MA<br />
