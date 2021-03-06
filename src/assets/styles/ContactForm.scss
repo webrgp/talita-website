@@ -1,0 +1,14 @@
+@import 'variables';
+
+// Configuration
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+
+fieldset.ContactForm {
+
+  background-color: rgba($pink, .5);
+  padding: 2rem;
+
+}
