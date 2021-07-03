@@ -16,7 +16,7 @@ const IndexPage: React.FC<PageProps> = () => (
     <CalloutRibbon
       link={<a className="btn" href="http://talitacamilo.gettimely.com" target="_blank" rel="noreferrer noopener">Schedule a Visit</a>}
     >
-      Learn the Cost of your <strong>Accounting Solutions</strong> Right Now!
+      Get back to the job of <strong>running your business</strong><br />and leave the bureaucratic part to us!
     </CalloutRibbon>
     <ServicesSection />
     <Testimonials />

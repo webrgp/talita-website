@@ -1,12 +1,22 @@
 {
   "testimonials": [
     {
+      "quote": "I've been a business owner for over ten years. Throughout the years, I've faced many tax issues. I changed accountants so many times, trying to find one able to help me out with these situations. Since I met Talita Camilo Professional Services, they take care of every accounting needs of my company. Talita Camilo and Matheus Miranda work hard to help me keep up with deadlines, documentation, audits, etc. I know I can trust their advice. They are honest, dependable, straightforward, and the best at what you do. This year, I saved over 110,000.00 dollars on insurance audits, and I can't thank Talita and her team enough.  I highly recommend Talita Camilo Professional Services to anyone who's looking to have their fiscal life organized. Thank you so much, Talita!",
+      "cite": "Ricardo Batista",
+      "complement": "CEO at Farina Roofing"
+    },
+    {
+      "quote": "Talita Camilo and her team are always ready to help me with all my tax needs. They make it simple and stress-free. I can always trust their accurate advice and professional assistance. I recommend Talita Camilo Professional Services to anyone who’s looking for a professional, reliable, and straightforward tax expert. ",
+      "cite": "Maysa Tabbert"
+    },
+    {
       "quote": "Talita is a kind professional, who puts her customers needs over business. She helped walk us through a legal process and translated effortlessly without her i don’t know what we would have done! We also get our taxes done here which is smooth sailing.",
       "cite": "Anna N."
     },
     {
-      "quote": "I have known and valued Talita’s thoughtful input, analysis and attention to detail for a long time now. Not only she has been an asset to our company, she’s also our partner.",
-      "cite": "Rodrigo P."
+      "quote": "I have known and valued Talita’s thoughtful input, analysis and attention to detail for a long time now. Not only she has been an asset to our company, her council was essecial to our growth.",
+      "cite": "Rodrigo P.",
+      "complement": "Partner at HelloDative.com"
     }
   ]
 }

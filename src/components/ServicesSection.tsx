@@ -10,7 +10,7 @@ const ServicesSection: React.FC = () => {
       <header>
         <h3>Services</h3>
         <p>
-          Our firm provides individuals, families, and small to medium size businesses in all industries and professions with quality, affordable, personalized tax and professional services in your area.
+          We provide individuals and small to medium-size businesses in all industries with quality, affordable, and personalized professional services and tax solutions.
         </p>
       </header>
 

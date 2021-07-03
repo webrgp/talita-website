@@ -24,7 +24,7 @@ const Testimonials: React.FC = () => {
             >
               <blockquote>
                 <p>{testimonial.quote}</p>
-                <cite>{testimonial.cite}</cite>
+                <cite><strong>{testimonial.cite}</strong>{testimonial.complement !== undefined && testimonial.complement && (`, ${testimonial.complement}`)}</cite>
               </blockquote>
             </div>
           ))}
