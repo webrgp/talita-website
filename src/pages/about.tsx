@@ -22,9 +22,9 @@ const AboutPage: React.FC<PageProps> = () => (
       />
     </PageHeader>
     <div className="container rich-text">
-      <h3>About Talita Camilo</h3>
-      <p>Ipsum dolor adipisicing laborum id minim duis ut qui. Non ipsum sunt nulla sint. Minim occaecat id exercitation aute enim proident deserunt commodo qui occaecat sit esse elit. Nulla sunt exercitation nostrud enim ipsum excepteur magna eiusmod. Eiusmod dolore et nulla et dolor voluptate. Tempor do voluptate consectetur aute velit.</p>
-      <p>Ipsum dolor adipisicing laborum id minim duis ut qui. Non ipsum sunt nulla sint. Minim occaecat id exercitation aute enim proident deserunt commodo qui occaecat sit esse elit. Nulla sunt exercitation nostrud enim ipsum excepteur magna eiusmod. Eiusmod dolore et nulla et dolor voluptate. Tempor do voluptate consectetur aute velit.</p>
+      <p>Talita Camilo Professional Services provides individuals and small to medium-size businesses in all industries with quality, affordable, and personalized professional services and tax solutions.</p>
+      <p><strong>We are committed to helping each of our clients succeed. For this reason, our employees are always up-to-date with the latest audit, accounting, and tax requirements. It ensures that we deliver accurately the best advice combined with solid and dependable customer service.</strong></p>
+      <p>Our high standards of service, and specialized team establishes the difference between Talita Camilo Professional Services and the other firms. You can trust us to absolve financial stress from your business and personal finances matters. </p>
     </div>
 
     <TeamSection />

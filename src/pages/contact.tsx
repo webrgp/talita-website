@@ -13,6 +13,7 @@ const ContactPage = () => (
     <div className="container-fluid container-lg">
       <div className="row justify-content-center">
         <div className="col col-md-10">
+          <p>We provide individuals and small to medium-size businesses in all industries with quality, affordable, and personalized professional services and tax solutions. Contact us today!</p>
           <ContactForm />
         </div>
       </div>
