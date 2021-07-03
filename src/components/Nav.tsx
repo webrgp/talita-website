@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 const navItems = [
   { url: `/about/`, title: `About Us`},
   { url: `/services/`, title: `Services`},
-  { url: `/blog/`, title: `Blog`},
+  // { url: `/blog/`, title: `Blog`},
   { url: `/contact/`, title: `Contact Us`},
   { url: `http://talitacamilo.gettimely.com`, title: `Schedule a Visit`},
   { url: `https://talitacamilo.clientportal.com`, title: `Client Portal`},
