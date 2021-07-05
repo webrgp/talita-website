@@ -11,7 +11,7 @@ const AboutPage: React.FC<PageProps> = () => (
     <SEO title="About Us" />
     <PageHeader title="About Us" >
       <StaticImage
-        src="../assets/images/about-us-cover.jpg"
+        src="../assets/images/talita-about-cover.jpg"
         quality={100}
         width={1200}
         aspectRatio={1110/454}

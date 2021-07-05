@@ -1,0 +1,25 @@
+{
+  "Main" : {
+    "quote" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "paragraph",
+        "label" : "Quote"
+      }
+    },
+    "cite" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading5",
+        "label" : "Cite"
+      }
+    },
+    "cite_complement" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading6",
+        "label" : "Cite Complement"
+      }
+    }
+  }
+}

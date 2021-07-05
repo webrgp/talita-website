@@ -10,7 +10,7 @@ export function wrapPageElement({ element, props }) {
 }
 
 export function onInitialClientRender() {
-  particlesJS.load('particles-js', 'particlesjs-config.json', function() {
+  particlesJS.load('particles-js', '/particlesjs-config.json', function() {
     console.log('callback - particles.js config loaded');
   });
 }

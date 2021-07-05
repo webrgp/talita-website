@@ -1,0 +1,29 @@
+{
+  "Main" : {
+    "name" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading2",
+        "label" : "Name"
+      }
+    },
+    "job_title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading3",
+        "label" : "Job Title"
+      }
+    },
+    "profile_picture" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : {
+          "width" : 720,
+          "height" : 720
+        },
+        "thumbnails" : [ ],
+        "label" : "Profile Picture"
+      }
+    }
+  }
+}

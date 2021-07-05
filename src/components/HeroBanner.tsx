@@ -12,7 +12,7 @@ const HeroBanner: React.FC<Props> = ({ title }) => {
   return (
     <section className="HeroBanner">
       <StaticImage
-        src="../assets/images/home-cover.jpg"
+        src="../assets/images/talita-home-cover.jpg"
         quality={100}
         width={1400}
         formats={["auto", "webp", "avif"]}

@@ -6,6 +6,7 @@
   "author": "Rodrigo Passos <rodrigopassos@mac.com>",
   "dependencies": {
     "bootstrap": "^4.6.0",
+    "dotenv": "^10.0.0",
     "gatsby": "^3.8.1",
     "gatsby-plugin-gatsby-cloud": "^2.8.1",
     "gatsby-plugin-image": "^1.8.0",
@@ -14,6 +15,7 @@
     "gatsby-plugin-react-helmet": "^4.8.0",
     "gatsby-plugin-sharp": "^3.8.0",
     "gatsby-source-filesystem": "^3.8.0",
+    "gatsby-source-prismic": "^3.3.6",
     "gatsby-transformer-sharp": "^3.8.0",
     "particles.js": "^2.0.0",
     "prop-types": "^15.7.2",

@@ -1,0 +1,55 @@
+{
+  "Main" : {
+    "title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading2",
+        "label" : "Title"
+      }
+    },
+    "uid" : {
+      "type" : "UID",
+      "config" : {
+        "label" : "slug"
+      }
+    },
+    "cover_picture" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : {
+          "width" : 1200,
+          "height" : 720
+        },
+        "thumbnails" : [ {
+          "name" : "listing",
+          "width" : 600,
+          "height" : 360
+        } ],
+        "label" : "Cover Picture"
+      }
+    },
+    "summary" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "paragraph",
+        "label" : "Summary"
+      }
+    },
+    "rich_content" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph,preformatted,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item",
+        "allowTargetBlank" : true,
+        "label" : "Rich Content"
+      }
+    },
+    "related_posts" : {
+      "type" : "Link",
+      "config" : {
+        "select" : "document",
+        "customtypes" : [ "blog_post" ],
+        "label" : "Related Posts"
+      }
+    }
+  }
+}

@@ -1,47 +1,79 @@
 import React, { useState } from 'react'
+import { StaticQuery, graphql } from "gatsby"
 
 import "../assets/styles/Testimonials.scss"
-
-import testimonialData from "../data/testimonials.json"
 
 const Testimonials: React.FC = () => {
 
   const [activeTestimonial, setActiveTestimonial] = useState(0);
 
-  const { testimonials } = testimonialData
-
   return (
-    <section className="Testimonials">
-      <header>
-        <h3>Testimonials</h3>
-      </header>
-      <div className="Testimonials--wrapper">
-        <div className="Testimonials--quotes">
-          {testimonials && testimonials.map( (testimonial: any, index: number) => (
-            <div
-              key={`quote-${index}`}
-              className={`Testimonials--quote ${index === activeTestimonial ? 'active' : ''}`}
-            >
-              <blockquote>
-                <p>{testimonial.quote}</p>
-                <cite><strong>{testimonial.cite}</strong>{testimonial.complement !== undefined && testimonial.complement && (`, ${testimonial.complement}`)}</cite>
-              </blockquote>
+    <StaticQuery
+      query={graphql`
+        query Testimonials {
+          allPrismicTestimonials {
+            edges {
+              node {
+                data {
+                  cite {
+                    text
+                  }
+                  quote {
+                    text
+                  }
+                  cite_complement {
+                    text
+                  }
+                }
+              }
+            }
+          }
+        }
+      `}
+      render={data => {
+        console.log(data);
+
+        const testimonials = data.allPrismicTestimonials.edges
+
+        return (
+          <section className="Testimonials">
+            <header>
+              <h3>Testimonials</h3>
+            </header>
+            <div className="Testimonials--wrapper">
+              <div className="Testimonials--quotes">
+                {testimonials && testimonials.map( (n: any, index: number) => {
+                  const { node } = n
+                  const testimonial = node.data
+                  return (
+                    <div
+                      key={`quote-${index}`}
+                      className={`Testimonials--quote ${index === activeTestimonial ? 'active' : ''}`}
+                    >
+                      <blockquote>
+                        <p>{testimonial.quote[0].text}</p>
+                        <cite><strong>{testimonial.cite[0].text}</strong>{testimonial.cite_complement && testimonial.cite_complement.length > 0 && (`, ${testimonial.cite_complement[0].text}`)}</cite>
+                      </blockquote>
+                    </div>
+                  )
+                })}
+              </div>
+              <nav>
+                <ul>
+                  {testimonials && testimonials.map( (testimonial: any, index: number) => (
+                    <li key={`nav-btn-${index}`} className={index === activeTestimonial ? 'active' : ''}>
+                      <button
+                        onClick={() => setActiveTestimonial(index)}
+                      >{index}</button>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
             </div>
-          ))}
-        </div>
-        <nav>
-          <ul>
-            {testimonials && testimonials.map( (testimonial: any, index: number) => (
-              <li key={`nav-btn-${index}`} className={index === activeTestimonial ? 'active' : ''}>
-                <button
-                  onClick={() => setActiveTestimonial(index)}
-                >{index}</button>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </div>
-    </section>
+          </section>
+        )
+      }}
+    />
   )
 }
 
