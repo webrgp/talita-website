@@ -5,6 +5,7 @@ import LogoSVG from '../assets/images/talita-logo-horizontal-white.svg'
 import FacebookSVG from '../assets/images/facebook-square-brands.svg'
 import LinkedInSVG from '../assets/images/linkedin-brands.svg'
 import InstagramSVG from '../assets/images/instagram-square-brands.svg'
+import AlignableSVG from '../assets/images/alignable-logo.svg'
 import MapMarkerSVG from '../assets/images/map-marker-alt-solid.svg'
 
 import "../assets/styles/Footer.scss"
@@ -43,8 +44,9 @@ const Footer: React.FC = () => (
           <a href="https://www.instagram.com/tcproservices/" target="_blank" rel="noreferrer noopener">
             <img src={InstagramSVG} alt="Instagram Icon"/>
           </a>
-
-          {/* https://www.alignable.com/barnstable-ma/talita-camilo-professional-services-2 */}
+          <a href="https://www.alignable.com/barnstable-ma/talita-camilo-professional-services-2" target="_blank" rel="noreferrer noopener">
+            <img src={AlignableSVG} alt="Alignable Icon"/>
+          </a>
         </div>
       </div>
       <div className="Footer--cards">
