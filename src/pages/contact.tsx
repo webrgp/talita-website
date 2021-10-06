@@ -6,7 +6,7 @@ import SEO from "../components/SEO"
 import ContactForm from "../components/ContactForm"
 
 const ContactPage = () => (
-  <article>
+  <article style={{ paddingBottom: '2rem' }}>
     <SEO title="Contact Us" />
     <PageHeader title="Contact Us" />
 
@@ -18,9 +18,6 @@ const ContactPage = () => (
         </div>
       </div>
     </div>
-
-    <LocationSection />
-
   </article>
 )
 
