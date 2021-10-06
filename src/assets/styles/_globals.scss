@@ -21,3 +21,14 @@
   border: 0;
   font-weight: bold;
 }
+
+.btn-muted {
+  @include button-variant($muted, $black);
+  @include button-size(1rem, 1.25rem, 1.25rem, 1, 0);
+  border: 0;
+  font-weight: bold;
+}
+
+.btn + .btn {
+  margin-left: 0.5rem;
+}

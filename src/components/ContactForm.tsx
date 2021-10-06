@@ -1,66 +1,71 @@
 import React from "react"
 import { useForm, SubmitHandler } from "react-hook-form"
 
-import "../assets/styles/ContactForm.scss"
+import { IContactFields } from "../types/IContactFields"
 
-type Inputs = {
-  name: string
-  email: string
-  phone: string
-  message: string
-}
+import "../assets/styles/ContactForm.scss"
+import FormField from "./FormField"
 
 const ContactForm: React.FC = () => {
   const {
     register,
     handleSubmit,
-    watch,
+    reset,
     formState: { errors },
-  } = useForm<Inputs>()
+  } = useForm<IContactFields>()
 
-  const onSubmit: SubmitHandler<Inputs> = data => console.log(data)
-
-  console.log(errors)
+  const onSubmit: SubmitHandler<IContactFields> = data => console.log(data)
 
   return (
     <fieldset className="ContactForm">
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="form-row">
           <div className="form-group col-md-12">
-            <label htmlFor="name">Name</label>
-            <input
-              type="text"
-              className="form-control"
-              {...register("name", { required: true })}
+            <FormField
+              label="name"
+              register={register}
+              field={<input />}
+              error={errors.name}
+              required
             />
           </div>
         </div>
         <div className="form-row">
           <div className="form-group col-md-6">
-            <label htmlFor="email">Email</label>
-            <input
-              type="email"
-              className="form-control"
-              {...register("email")}
+            <FormField
+              label="email"
+              register={register}
+              field={<input type="email" />}
+              error={errors.email}
+              required
             />
           </div>
           <div className="form-group col-md-6">
-            <label htmlFor="phone">Phone</label>
-            <input type="tel" className="form-control" {...register("phone")} />
+            <FormField
+              label="phone"
+              register={register}
+              field={<input type="tel" />}
+              error={errors.phone}
+              required
+            />
           </div>
         </div>
         <div className="form-row">
           <div className="form-group col-md-12">
-            <label htmlFor="message">Message</label>
-            <textarea
-              rows={5}
-              className="form-control"
-              {...register("message")}
+            <FormField
+              label="message"
+              register={register}
+              field={<textarea rows={5} />}
+              error={errors.message}
+              required
             />
           </div>
         </div>
         <button type="submit" className="btn btn-red">
           Submit
+        </button>
+        <button type="button" className="btn btn-muted" onClick={() => reset()}>
+          Reset
         </button>
       </form>
     </fieldset>
