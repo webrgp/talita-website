@@ -1,4 +1,4 @@
-@import 'variables';
+@import "variables";
 
 // Configuration
 @import "bootstrap/scss/functions";
@@ -21,7 +21,7 @@
   }
 
   a.btn {
-    @include button-size(1rem, 1.25rem, 1.25rem, 1, 0);
+    @include button-size(1rem, 1.25rem, 1.25rem, 1);
     @include button-variant($white, $red);
     font-weight: bold;
     color: $red;
@@ -29,7 +29,7 @@
 
     &:hover {
       color: $red;
-      background-color: rgba($white, .9);
+      background-color: rgba($white, 0.9);
     }
   }
 }

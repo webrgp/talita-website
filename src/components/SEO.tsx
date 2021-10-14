@@ -3,13 +3,18 @@ import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
 interface ISEO {
-  title?: string,
-  description?: string,
-  lang?: string,
+  title?: string
+  description?: string
+  lang?: string
   meta?: Array<any>
 }
 
-const SEO: React.FC<ISEO> = ({ title, description = ``, lang = `en`, meta=[] }) => {
+const SEO: React.FC<ISEO> = ({
+  title,
+  description = ``,
+  lang = `en`,
+  meta = [],
+}) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -33,9 +38,13 @@ const SEO: React.FC<ISEO> = ({ title, description = ``, lang = `en`, meta=[] }) 
         lang,
       }}
       title={title}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : ''}
+      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : ""}
       meta={[
         ...meta,
+        {
+          name: `viewport`,
+          content: `width=device-width, initial-scale=1`,
+        },
         {
           name: `description`,
           content: metaDescription,

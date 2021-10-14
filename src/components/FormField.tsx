@@ -1,33 +1,62 @@
 import React from "react"
-import { FieldError, Path, UseFormRegister } from "react-hook-form"
-import { IContactFields } from "../types/IContactFields"
+import {
+  FieldError,
+  Path,
+  UseFormRegister,
+  UseFormRegisterReturn,
+} from "react-hook-form"
 
-type FieldProps = {
-  label: Path<IContactFields>
-  register: UseFormRegister<IContactFields>
-  required?: boolean
-  field: JSX.Element
+interface FieldProps {
+  children: React.ReactElement<
+    HTMLInputElement & HTMLTextAreaElement & UseFormRegisterReturn
+  >
   error?: FieldError
 }
 
-const FormField = ({ label, register, required, field, error }: FieldProps) => {
-  const Elem = React.cloneElement(field, {
+const FormField = ({ error, children }: FieldProps) => {
+  console.log(children)
+
+  const label = children.props?.name
+
+  const field = React.cloneElement(children as JSX.Element, {
     className: `form-control${error !== undefined ? " is-invalid" : ""}`,
     "aria-invalid": error !== undefined,
-    ...register(label, { required }),
+    "aria-describedby": `error-${label}-required error-${label}-pattern error-${label}-minLength`,
   })
-
-  console.log(error)
 
   return (
     <>
-      <label className="text-capitalize" htmlFor={label}>
+      <label className="form-label text-capitalize" htmlFor={label}>
         {label}
       </label>
-      {Elem}
-      <span role="alert" className="invalid-tooltip">
-        Required
-      </span>
+      {field}
+      {error && error.type === "required" && (
+        <span
+          id={`error-${label}-required`}
+          role="alert"
+          className="invalid-feedback"
+        >
+          {error.message || "This is required"}
+        </span>
+      )}
+      {error && error.type === "pattern" && (
+        <span
+          id={`error-${label}-pattern`}
+          role="alert"
+          className="invalid-feedback"
+        >
+          {error.message || "Invalid pattern"}
+        </span>
+      )}
+      {error && error.type === "minLength" && (
+        <span
+          id={`error-${label}-minLength`}
+          role="alert"
+          className="invalid-feedback"
+        >
+          {error.message || "Invalid pattern"}
+        </span>
+      )}
     </>
   )
 }

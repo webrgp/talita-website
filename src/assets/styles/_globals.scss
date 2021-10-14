@@ -10,21 +10,21 @@
 
 .btn-outline-red {
   @include button-outline-variant($red);
-  @include button-size(1rem, 1.25rem, 1.25rem, 1, 0);
+  @include button-size(1rem, 1.25rem, 1.25rem, 1);
   border-width: 3px;
   font-weight: bold;
 }
 
 .btn-red {
   @include button-variant($red, $white);
-  @include button-size(1rem, 1.25rem, 1.25rem, 1, 0);
+  @include button-size(1rem, 1.25rem, 1.25rem, 1);
   border: 0;
   font-weight: bold;
 }
 
 .btn-muted {
   @include button-variant($muted, $black);
-  @include button-size(1rem, 1.25rem, 1.25rem, 1, 0);
+  @include button-size(1rem, 1.25rem, 1.25rem, 1);
   border: 0;
   font-weight: bold;
 }
