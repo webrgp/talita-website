@@ -1,10 +1,10 @@
-import * as React from "react"
-import { PageProps } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import React from 'react'
+import { PageProps } from 'gatsby'
+import { StaticImage } from 'gatsby-plugin-image'
 
-import PageHeader from "../components/PageHeader"
+import PageHeader from '../components/PageHeader'
 
-import SEO from "../components/SEO"
+import SEO from '../components/SEO'
 
 const ServicesPage: React.FC<PageProps> = () => (
   <article>
@@ -15,7 +15,7 @@ const ServicesPage: React.FC<PageProps> = () => (
         quality={100}
         width={1400}
         aspectRatio={1110 / 454}
-        formats={["auto", "webp", "avif"]}
+        formats={[`auto`, `webp`, `avif`]}
         loading="eager"
         placeholder="blurred"
         alt="Services Cover"
@@ -26,7 +26,7 @@ const ServicesPage: React.FC<PageProps> = () => (
       <p>
         Talita Camilo Professional Services provides individuals and small to
         medium-size businesses in all industries with quality, affordable, and
-        personalized professional services and tax solutions.{" "}
+        personalized professional services and tax solutions.{` `}
       </p>
     </div>
 
@@ -39,7 +39,7 @@ const ServicesPage: React.FC<PageProps> = () => (
             width={720}
             aspectRatio={255 / 283}
             loading="lazy"
-            formats={["auto", "webp", "avif"]}
+            formats={[`auto`, `webp`, `avif`]}
             alt="Translations"
           />
         </div>
@@ -51,7 +51,7 @@ const ServicesPage: React.FC<PageProps> = () => (
             required to translate your documents. We use the most rigorous
             third-party translator testing service available, and our three-step
             quality control process ensures that every document is accurate,
-            properly formatted, and consistent throughout.{" "}
+            properly formatted, and consistent throughout.{` `}
           </p>
         </div>
       </div>
@@ -64,7 +64,7 @@ const ServicesPage: React.FC<PageProps> = () => (
             width={720}
             aspectRatio={255 / 283}
             loading="lazy"
-            formats={["auto", "webp", "avif"]}
+            formats={[`auto`, `webp`, `avif`]}
             alt="Taxes & Tax Resolutions"
           />
         </div>
@@ -90,7 +90,7 @@ const ServicesPage: React.FC<PageProps> = () => (
             width={720}
             aspectRatio={255 / 283}
             loading="lazy"
-            formats={["auto", "webp", "avif"]}
+            formats={[`auto`, `webp`, `avif`]}
             alt="Bookkeeping & Payroll"
           />
         </div>
@@ -116,7 +116,7 @@ const ServicesPage: React.FC<PageProps> = () => (
             width={720}
             aspectRatio={255 / 283}
             loading="lazy"
-            formats={["auto", "webp", "avif"]}
+            formats={[`auto`, `webp`, `avif`]}
             alt="Consulting"
           />
         </div>
@@ -126,7 +126,7 @@ const ServicesPage: React.FC<PageProps> = () => (
             We can assist you with your business strategies and ventures. No
             matter how complex your business questions, we have the skills and
             experience to deliver the answers you need to move forward. Our
-            consulting services focus on our clients' most critical issues and
+            consulting services focus on our clients most critical issues and
             opportunities. We dive deep into their strategy, organization,
             operations, and corporate finance. Together, we can achieve
             extraordinary outcomes.

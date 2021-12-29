@@ -1,10 +1,10 @@
-import React from "react"
-import { StaticImage } from "gatsby-plugin-image"
+import React from 'react'
+import { StaticImage } from 'gatsby-plugin-image'
 
-import "../assets/styles/HeroBanner.scss"
+import '../assets/styles/HeroBanner.scss'
 
 interface Props {
-  title: String
+  title: string
 }
 
 const HeroBanner: React.FC<Props> = ({ title }) => {
@@ -14,7 +14,7 @@ const HeroBanner: React.FC<Props> = ({ title }) => {
         src="../assets/images/talita-home-cover.jpg"
         quality={100}
         width={1400}
-        formats={["auto", "webp", "avif"]}
+        formats={[`auto`, `webp`, `avif`]}
         loading="eager"
         placeholder="blurred"
         alt="Talita Team Cover"
