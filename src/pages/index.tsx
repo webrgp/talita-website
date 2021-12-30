@@ -1,43 +1,11 @@
 import { graphql, PageProps } from 'gatsby'
+import { HomeScreen } from '../components/Screens/HomeScreen'
 
-import SEO from '../components/SEO'
-import HeroBanner from '../components/HeroBanner'
-import CalloutChecklist from '../components/CalloutChecklist'
-import CalloutRibbon from '../components/CalloutRibbon'
-import ServicesSection from '../components/ServicesSection'
-import Testimonials from '../components/Testimonials'
-
-const IndexPage = ({ data }: PageProps) => {
-  console.log(data)
-
-  return (
-    <>
-      <SEO title="Home" />
-      <HeroBanner title="We Are Here To Help" />
-      <CalloutChecklist />
-      <CalloutRibbon
-        link={
-          <a
-            className="btn"
-            href="http://talitacamilo.gettimely.com"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            Schedule a Visit
-          </a>
-        }
-      >
-        Get back to the job of <strong>running your business</strong>
-        <br />
-        and leave the bureaucratic part to us!
-      </CalloutRibbon>
-      <ServicesSection />
-      <Testimonials />
-    </>
-  )
+const HomePage = ({ data }: PageProps) => {
+  return <HomeScreen entry={data} />
 }
 
-export default IndexPage
+export default HomePage
 
 export const query = graphql`
   query Home {
@@ -46,7 +14,7 @@ export const query = graphql`
       url
       data {
         hero_title {
-          html
+          text
         }
         hero_banner_picture {
           alt

@@ -18,6 +18,6 @@
       "@/static/*": ["./static/*"]
     }
   },
-  "exclude": ["node_modules"],
-  "include": ["./src/**/*", "./__helpers__/*"]
+  "include": ["./src/**/*", "./__helpers__/*"],
+  "exclude": ["node_modules", "./src/types.generated.ts"]
 }

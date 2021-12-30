@@ -1,0 +1,23 @@
+schema: http://localhost:8000/___graphql
+documents:
+  - ./src/**/*.{ts,tsx}
+  - ./.cache/fragments/*.js
+  - ./node_modules/@imgix/gatsby/**/*.js
+  - ./node_modules/gatsby*/!(node_modules)/**/*.js
+generates:
+  ./src/types.generated.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+    config:
+      skipTypename: true
+      maybeValue: T | undefined
+      scalars:
+        Date: string
+        JSON: unknown
+
+# Perform actions before and after `yarn gen` is executed.
+hooks:
+  afterOneFileWrite:
+    # This runs the generated file through Prettier to get nice formatting.
+    - prettier --write

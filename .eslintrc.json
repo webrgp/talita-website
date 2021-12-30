@@ -61,6 +61,7 @@
       }
     ],
     "react/prop-types": "off",
+    "react/require-default-props": "off",
     "react/function-component-definition": "off",
     "react/jsx-filename-extension": "off",
     "react/jsx-props-no-spreading": "off",
@@ -89,6 +90,7 @@
         "@typescript-eslint/explicit-function-return-type": "off",
         "@typescript-eslint/no-explicit-any": "off",
         "@typescript-eslint/no-var-requires": "off",
+        "camelcase": "off",
         "no-use-before-define": [0],
         "@typescript-eslint/no-use-before-define": [1],
         "import/no-unresolved": 0,

@@ -1,26 +1,40 @@
-import React from 'react'
-import { StaticImage } from 'gatsby-plugin-image'
+import {
+  GatsbyImage,
+  IGatsbyImageData,
+  withArtDirection,
+} from 'gatsby-plugin-image'
+import { PrismicHomepageDataType } from '@/types.generated'
 
 import '../assets/styles/HeroBanner.scss'
 
-interface Props {
-  title: string
-}
+const HeroBanner = ({
+  hero_title,
+  hero_banner_picture,
+}: PrismicHomepageDataType) => {
+  const bannerImage = hero_banner_picture?.gatsbyImageData as IGatsbyImageData
+  const bannerAlt = hero_banner_picture?.alt as string
 
-const HeroBanner: React.FC<Props> = ({ title }) => {
+  const mobileImage = hero_banner_picture?.thumbnails?.Mobile
+    ?.gatsbyImageData as IGatsbyImageData
+
+  const images = withArtDirection(bannerImage, [
+    {
+      media: `(max-width: 720px)`,
+      image: mobileImage,
+    },
+  ])
+
   return (
     <section className="HeroBanner">
-      <StaticImage
-        src="../assets/images/talita-home-cover.jpg"
-        quality={100}
-        width={1400}
-        formats={[`auto`, `webp`, `avif`]}
-        loading="eager"
-        placeholder="blurred"
-        alt="Talita Team Cover"
-      />
+      {images && (
+        <GatsbyImage
+          image={images}
+          alt={bannerAlt}
+          className="HeroBanner--banner-image"
+        />
+      )}
       <div className="HeroBanner--caption">
-        <h2>{title}</h2>
+        {hero_title && <h1>{hero_title?.text}</h1>}
       </div>
     </section>
   )

@@ -1,6 +1,5 @@
-import * as React from "react"
-import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import { Helmet } from 'react-helmet'
+import { useStaticQuery, graphql } from 'gatsby'
 
 interface ISEO {
   title?: string
@@ -9,12 +8,7 @@ interface ISEO {
   meta?: Array<any>
 }
 
-const SEO: React.FC<ISEO> = ({
-  title,
-  description = ``,
-  lang = `en`,
-  meta = [],
-}) => {
+const SEO = ({ title, description = ``, lang = `en`, meta = [] }: ISEO) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -26,7 +20,7 @@ const SEO: React.FC<ISEO> = ({
           }
         }
       }
-    `
+    `,
   )
 
   const metaDescription = description || site.siteMetadata.description
@@ -38,7 +32,7 @@ const SEO: React.FC<ISEO> = ({
         lang,
       }}
       title={title}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : ""}
+      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : ``}
       meta={[
         ...meta,
         {
