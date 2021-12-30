@@ -1,10 +1,9 @@
-import * as React from "react"
-import { PageProps } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import { PageProps } from 'gatsby'
+import { StaticImage } from 'gatsby-plugin-image'
 
-import SEO from "../components/SEO"
-import PageHeader from "../components/PageHeader"
-import TeamSection from "../components/TeamSection"
+import SEO from '../components/SEO'
+import PageHeader from '../components/PageHeader'
+import TeamSection from '../components/TeamSection'
 
 const AboutPage: React.FC<PageProps> = () => (
   <article>
@@ -15,7 +14,7 @@ const AboutPage: React.FC<PageProps> = () => (
         quality={100}
         width={1400}
         aspectRatio={1110 / 454}
-        formats={["auto", "webp", "avif"]}
+        formats={[`auto`, `webp`, `avif`]}
         loading="eager"
         placeholder="blurred"
         alt="Talita Team Cover"
@@ -40,7 +39,7 @@ const AboutPage: React.FC<PageProps> = () => (
         Our high standards of service, and specialized team establishes the
         difference between Talita Camilo Professional Services and the other
         firms. You can trust us to absolve financial stress from your business
-        and personal finances matters.{" "}
+        and personal finances matters.{` `}
       </p>
     </div>
 

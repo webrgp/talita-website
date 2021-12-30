@@ -1,10 +1,10 @@
-import React from "react"
-import { useForm, SubmitHandler } from "react-hook-form"
+import React from 'react'
+import { useForm, SubmitHandler } from 'react-hook-form'
 
-import { IContactFields } from "../types/IContactFields"
+import { IContactFields } from '../types/IContactFields'
 
-import "../assets/styles/ContactForm.scss"
-import FormField from "./FormField"
+import '../assets/styles/ContactForm.scss'
+import FormField from './FormField'
 
 const emailValidationRegex =
   /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/
@@ -17,7 +17,7 @@ const ContactForm: React.FC = () => {
     formState: { errors },
   } = useForm<IContactFields>()
 
-  const onSubmit: SubmitHandler<IContactFields> = data => console.log(data)
+  const onSubmit: SubmitHandler<IContactFields> = (data) => console.log(data)
 
   return (
     <fieldset className="ContactForm">
@@ -28,18 +28,18 @@ const ContactForm: React.FC = () => {
       >
         <div className="col-12 position-relative">
           <FormField error={errors.name}>
-            <input type="text" {...register("name", { required: true })} />
+            <input type="text" {...register(`name`, { required: true })} />
           </FormField>
         </div>
         <div className="col-12 col-md-6 position-relative">
           <FormField error={errors.email}>
             <input
               type="email"
-              {...register("email", {
+              {...register(`email`, {
                 required: true,
                 pattern: {
                   value: emailValidationRegex,
-                  message: "Invalid email address",
+                  message: `Invalid email address`,
                 },
               })}
             />
@@ -49,7 +49,7 @@ const ContactForm: React.FC = () => {
           <FormField error={errors.phone}>
             <input
               type="tel"
-              {...register("phone", {
+              {...register(`phone`, {
                 required: true,
                 minLength: {
                   value: 10,
@@ -61,7 +61,7 @@ const ContactForm: React.FC = () => {
         </div>
         <div className="col-12 position-relative">
           <FormField error={errors.message}>
-            <textarea rows={5} {...register("message", { required: true })} />
+            <textarea rows={5} {...register(`message`, { required: true })} />
           </FormField>
         </div>
         <div className="col-12">

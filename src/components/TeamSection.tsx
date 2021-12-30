@@ -1,7 +1,6 @@
-import React from "react"
-import { StaticImage } from "gatsby-plugin-image"
+import { StaticImage } from 'gatsby-plugin-image'
 
-import "../assets/styles/TeamSection.scss"
+import '../assets/styles/TeamSection.scss'
 
 const TeamSection: React.FC = () => {
   return (
@@ -19,7 +18,7 @@ const TeamSection: React.FC = () => {
                 quality={100}
                 width={640}
                 aspectRatio={1 / 1}
-                formats={["auto", "webp", "avif"]}
+                formats={[`auto`, `webp`, `avif`]}
                 loading="lazy"
                 placeholder="blurred"
                 alt="Talita Camilo Headshot"
@@ -34,30 +33,11 @@ const TeamSection: React.FC = () => {
           <div className="col-6 col-lg-4">
             <div className="TeamCard">
               <StaticImage
-                src="../assets/images/josi-profile.jpg"
-                quality={100}
-                width={640}
-                aspectRatio={1 / 1}
-                formats={["auto", "webp", "avif"]}
-                loading="lazy"
-                placeholder="blurred"
-                alt="Josi Piva Headshot"
-              />
-              <h4>
-                Josi Piva
-                <small>Account Manager</small>
-              </h4>
-            </div>
-          </div>
-
-          <div className="col-6 col-lg-4">
-            <div className="TeamCard">
-              <StaticImage
                 src="../assets/images/kellen-francescon-profile.jpg"
                 quality={100}
                 width={640}
                 aspectRatio={1 / 1}
-                formats={["auto", "webp", "avif"]}
+                formats={[`auto`, `webp`, `avif`]}
                 loading="lazy"
                 placeholder="blurred"
                 alt="Kellen Francescon Headshot"
@@ -76,7 +56,7 @@ const TeamSection: React.FC = () => {
                 quality={100}
                 width={640}
                 aspectRatio={1 / 1}
-                formats={["auto", "webp", "avif"]}
+                formats={[`auto`, `webp`, `avif`]}
                 loading="lazy"
                 placeholder="blurred"
                 alt="Talita Camilo Headshot"
@@ -95,7 +75,7 @@ const TeamSection: React.FC = () => {
                 quality={100}
                 width={640}
                 aspectRatio={1 / 1}
-                formats={["auto", "webp", "avif"]}
+                formats={[`auto`, `webp`, `avif`]}
                 loading="lazy"
                 placeholder="blurred"
                 alt="Andressa Costa Headshot"
@@ -114,7 +94,7 @@ const TeamSection: React.FC = () => {
                 quality={100}
                 width={640}
                 aspectRatio={1 / 1}
-                formats={["auto", "webp", "avif"]}
+                formats={[`auto`, `webp`, `avif`]}
                 loading="lazy"
                 placeholder="blurred"
                 alt="Raquel Crepaldi Headshot"

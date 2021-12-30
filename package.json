@@ -76,6 +76,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write \"src/**/*.js\"",
+    "caniuse-update": "npx browserslist@latest --update-db",
     "gen": "graphql-codegen --config graphql-codegen.yml"
   },
   "repository": {
