@@ -1,11 +1,11 @@
-import React, { useState } from "react"
+import { useState } from 'react'
+import { Link } from 'gatsby'
+import Particles from 'react-tsparticles'
 
-import { Link } from "gatsby"
+import LogoSVG from '../assets/images/talita-logo.svg'
+import Nav from './Nav'
 
-import LogoSVG from "../assets/images/talita-logo.svg"
-import Nav from "./Nav"
-
-import "../assets/styles/Header.scss"
+import '../assets/styles/Header.scss'
 
 const Header: React.FC = () => {
   const [isOpen, toggleOpen] = useState(false)
@@ -17,7 +17,7 @@ const Header: React.FC = () => {
           <img src={LogoSVG} alt="Talita Camilo Professional Services Logo" />
         </Link>
         <div className="particles-bg">
-          <div id="particles-js" />
+          <Particles className="tsparticles" url="/particlesjs-config.json" />
         </div>
       </div>
       <nav className="navbar navbar-dark justify-content-end navbar-expand-md">
@@ -25,14 +25,14 @@ const Header: React.FC = () => {
           className="navbar-toggler"
           type="button"
           aria-controls="mainNavigation"
-          aria-expanded={isOpen ? "true" : "false"}
+          aria-expanded={isOpen ? `true` : `false`}
           aria-label="Toggle navigation"
           onClick={() => toggleOpen(!isOpen)}
         >
-          <span className="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon" />
         </button>
         <div
-          className={`navbar-collapse collapse ${isOpen ? "show" : ""}`}
+          className={`navbar-collapse collapse ${isOpen ? `show` : ``}`}
           id="mainNavigation"
         >
           <div className="container-fluid">
