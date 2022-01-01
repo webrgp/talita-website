@@ -2,6 +2,8 @@ import PageHeader from '../components/PageHeader'
 import SEO from '../components/SEO'
 import ContactForm from '../components/ContactForm'
 
+const isBrowser = () => typeof window !== `undefined`
+
 const ContactPage = () => (
   <article style={{ paddingBottom: `2rem` }}>
     <SEO title="Contact Us" />
@@ -15,7 +17,7 @@ const ContactPage = () => (
             industries with quality, affordable, and personalized professional
             services and tax solutions. Contact us today!
           </p>
-          <ContactForm />
+          {isBrowser() && <ContactForm />}
         </div>
       </div>
     </div>
