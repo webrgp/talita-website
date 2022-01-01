@@ -1,3 +1,8 @@
+declare global {
+  interface Window {
+    grecaptcha: any
+  }
+}
 declare module '*.png' {
   const value: any
   export default value
