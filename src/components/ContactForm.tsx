@@ -30,6 +30,7 @@ const ContactForm: React.FC = () => {
 
     if (response.ok) {
       setSubmitted(true)
+      // eslint-disable-next-line @typescript-eslint/no-use-before-define
       reset()
     }
   }
