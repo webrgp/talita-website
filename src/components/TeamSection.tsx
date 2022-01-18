@@ -63,7 +63,7 @@ const TeamSection: React.FC = () => {
               />
               <h4>
                 Matheus Miranda
-                <small>Account Manager</small>
+                <small>Executive Administrative Assistant</small>
               </h4>
             </div>
           </div>
