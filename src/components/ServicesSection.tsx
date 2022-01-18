@@ -1,77 +1,111 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import { StaticImage } from 'gatsby-plugin-image'
+import { graphql, Link } from 'gatsby'
+import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 
 import '../assets/styles/ServicesSection.scss'
 
-const ServicesSection: React.FC = () => {
+interface IServicesItem {
+  title?: { text: string }
+  cover_picture?: any
+}
+
+const ServiceItem = ({ title, cover_picture }: IServicesItem) => {
+  const image = cover_picture?.gatsbyImageData as IGatsbyImageData
+  return (
+    <div className="col-6 col-md-3">
+      <GatsbyImage image={image} alt={title?.text ?? `Service Cover`} />
+      {title?.text && <h4>{title.text}</h4>}
+    </div>
+  )
+}
+
+interface ICalloutRibbon {
+  primary?: any
+  items?: [any]
+}
+
+const ServicesSection = ({ primary, items }: ICalloutRibbon) => {
   return (
     <section className="ServicesSection">
       <header>
-        <h3>Services</h3>
-        <p>
-          We provide individuals and small to medium-size businesses in all
-          industries with quality, affordable, and personalized professional
-          services and tax solutions.
-        </p>
+        {primary?.title?.text && <h3>{primary.title.text}</h3>}
+        <div dangerouslySetInnerHTML={{ __html: primary?.intro?.html }} />
       </header>
 
       <div className="container-fluid container-lg">
         <div className="row">
-          <div className="col-6 col-md-3">
-            <StaticImage
-              src="../assets/images/translation.jpg"
-              quality={100}
-              width={720}
-              aspectRatio={255 / 283}
-              formats={[`auto`, `webp`, `avif`]}
-              alt="Translations"
+          {items?.map((item: any, index: number) => (
+            <ServiceItem
+              key={`service-item--${index}`}
+              {...item?.featured_services?.document?.data}
             />
-            <h4>Translations</h4>
-          </div>
-          <div className="col-6 col-md-3">
-            <StaticImage
-              src="../assets/images/taxes.jpg"
-              quality={100}
-              width={720}
-              aspectRatio={255 / 283}
-              formats={[`auto`, `webp`, `avif`]}
-              alt="Taxes & Tax Resolutions"
-            />
-            <h4>Taxes & Tax Resolutions</h4>
-          </div>
-          <div className="col-6 col-md-3">
-            <StaticImage
-              src="../assets/images/bookkeping.jpg"
-              quality={100}
-              width={720}
-              aspectRatio={255 / 283}
-              formats={[`auto`, `webp`, `avif`]}
-              alt="Bookkeeping & Payroll"
-            />
-            <h4>Bookkeeping & Payroll</h4>
-          </div>
-          <div className="col-6 col-md-3">
-            <StaticImage
-              src="../assets/images/consulting.jpg"
-              quality={100}
-              width={720}
-              aspectRatio={255 / 283}
-              formats={[`auto`, `webp`, `avif`]}
-              alt="Consulting"
-            />
-            <h4>Consulting</h4>
-          </div>
+          ))}
         </div>
       </div>
 
-      <footer>
-        <Link className="btn btn-outline-red" to="/services">
-          View All Services
-        </Link>
-      </footer>
+      {primary?.cta_button_text && primary?.cta_button_link && (
+        <footer>
+          {primary?.cta_button_link?.link_type === `Document` && (
+            <Link
+              className="btn btn-outline-red"
+              to={`${primary?.cta_button_link?.url}${primary?.cta_button_link?.uid}`}
+            >
+              {primary?.cta_button_text}
+            </Link>
+          )}
+          {primary?.cta_button_link?.link_type === `web` && (
+            <a
+              className="btn btn-outline-red"
+              href={`${primary?.cta_button_link?.url}`}
+              target={`${primary?.cta_button_link?.target}`}
+              rel="noreferrer noopener"
+            >
+              {primary?.cta_button_text}
+            </a>
+          )}
+        </footer>
+      )}
     </section>
   )
 }
 
 export default ServicesSection
+
+export const query = graphql`
+  fragment homepageServicesGrid on PrismicHomepageDataBodyServicesGrid {
+    slice_type
+    primary {
+      title {
+        text
+      }
+      intro {
+        html
+      }
+      cta_button_text
+      cta_button_link {
+        link_type
+        url
+        slug
+        uid
+        target
+      }
+    }
+    items {
+      featured_services {
+        document {
+          ... on PrismicServices {
+            id
+            data {
+              title {
+                text
+              }
+              cover_picture {
+                url
+                gatsbyImageData
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`

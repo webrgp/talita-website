@@ -3,14 +3,15 @@ import {
   IGatsbyImageData,
   withArtDirection,
 } from 'gatsby-plugin-image'
-import { PrismicHomepageDataType } from '@/types.generated'
 
 import '../assets/styles/HeroBanner.scss'
 
-const HeroBanner = ({
-  hero_title,
-  hero_banner_picture,
-}: PrismicHomepageDataType) => {
+interface IHeroBanner {
+  hero_title?: any
+  hero_banner_picture?: any
+}
+
+const HeroBanner = ({ hero_title, hero_banner_picture }: IHeroBanner) => {
   const bannerImage = hero_banner_picture?.gatsbyImageData as IGatsbyImageData
   const bannerAlt = hero_banner_picture?.alt as string
 

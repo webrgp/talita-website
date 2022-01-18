@@ -12,6 +12,7 @@ export const query = graphql`
     prismicHomepage {
       id
       url
+      type
       data {
         hero_title {
           text
@@ -28,6 +29,13 @@ export const query = graphql`
               gatsbyImageData(placeholder: BLURRED)
             }
           }
+        }
+
+        body {
+          ...homepageFeaturedColumns
+          ...homepageRedRibbonCta
+          ...homepageServicesGrid
+          ...homepageTestimonials
         }
       }
     }

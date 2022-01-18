@@ -1,13 +1,11 @@
-import React from 'react'
-
-import "../assets/styles/PageHeader.scss"
+import '../assets/styles/PageHeader.scss'
 
 interface IPageHeader {
-  title: string,
-  children?: any,
+  title: string
+  children?: any
 }
 
-const PageHeader: React.FC<IPageHeader> = ({ title, children }) => {
+const PageHeader = ({ title, children }: IPageHeader) => {
   return (
     <header className="PageHeader">
       <h1>{title}</h1>

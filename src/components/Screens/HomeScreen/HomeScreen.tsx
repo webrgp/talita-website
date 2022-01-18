@@ -4,38 +4,46 @@ import HeroBanner from '../../HeroBanner'
 import SEO from '../../SEO'
 import ServicesSection from '../../ServicesSection'
 import Testimonials from '../../Testimonials'
-import { HomeQuery, PrismicHomepageDataType } from '../../../types.generated'
 
 interface Props {
-  entry: HomeQuery
+  entry: any
+}
+
+interface ISliceType {
+  slice_type: string
+  rest?: any
 }
 
 export const HomeScreen = ({ entry }: Props) => {
-  const contentData = entry?.prismicHomepage?.data as PrismicHomepageDataType
+  const contentData = entry?.prismicHomepage?.data
 
   return (
     <>
       <SEO title="Home" />
       <HeroBanner {...contentData} />
-      <CalloutChecklist />
-      <CalloutRibbon
-        link={
-          <a
-            className="btn"
-            href="http://talitacamilo.gettimely.com"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            Schedule a Visit
-          </a>
-        }
-      >
-        Get back to the job of <strong>running your business</strong>
-        <br />
-        and leave the bureaucratic part to us!
-      </CalloutRibbon>
-      <ServicesSection />
-      <Testimonials />
+      {contentData?.body &&
+        contentData?.body.map(
+          ({ slice_type, ...rest }: ISliceType, index: number) => {
+            switch (slice_type) {
+              case `featured_columns`:
+                return <CalloutChecklist key={`slice--${index}`} {...rest} />
+
+              case `red_ribbon_cta`:
+                return <CalloutRibbon key={`slice--${index}`} {...rest} />
+
+              case `services_grid`:
+                return <ServicesSection key={`slice--${index}`} {...rest} />
+
+              case `testimonials`:
+                return <Testimonials key={`slice--${index}`} {...rest} />
+
+              default:
+                break
+            }
+
+            return null
+          },
+        )}
     </>
   )
 }
