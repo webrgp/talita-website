@@ -76,7 +76,7 @@ const Footer: React.FC = () => (
             HYANNIS
           </a>
           <br />
-          100 West Main Street, Unit 2<br />
+          100 West Main Street, Unit 4<br />
           Hyannis, MA - 02601
           <br />
           (508) 790-7014
@@ -107,9 +107,9 @@ const Footer: React.FC = () => (
             ORLANDO
           </a>
           <br />
-          7065 Westpointe Boulevard unit 308
+          9100 Conroy Windermere Rd
           <br />
-          Orlando, FL
+          Windermere, FL
           <br />
           (508) 790-7014
         </FooterCard>
