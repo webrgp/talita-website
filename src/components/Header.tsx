@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'gatsby'
 import Particles from 'react-tsparticles'
+import { loadFull } from 'tsparticles'
 
 import LogoSVG from '../assets/images/talita-logo.svg'
 import Nav from './Nav'
@@ -10,6 +11,10 @@ import '../assets/styles/Header.scss'
 const Header: React.FC = () => {
   const [isOpen, toggleOpen] = useState(false)
 
+  const particlesInit = async (main: any) => {
+    await loadFull(main)
+  }
+
   return (
     <header className="Header">
       <div className="Header--logo-container">
@@ -17,7 +22,11 @@ const Header: React.FC = () => {
           <img src={LogoSVG} alt="Talita Camilo Professional Services Logo" />
         </Link>
         <div className="particles-bg">
-          <Particles className="tsparticles" url="/particlesjs-config.json" />
+          <Particles
+            className="tsparticles"
+            init={particlesInit}
+            url="/particlesjs-config.json"
+          />
         </div>
       </div>
       <nav className="navbar navbar-dark justify-content-end navbar-expand-md">
