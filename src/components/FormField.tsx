@@ -9,7 +9,7 @@ interface FieldProps {
 }
 
 const FormField = ({ error, children }: FieldProps) => {
-  const label = children.props?.name
+  const label = children?.props?.name
 
   const field = React.cloneElement(children as JSX.Element, {
     className: `form-control${error !== undefined ? ` is-invalid` : ``}`,

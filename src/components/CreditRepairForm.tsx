@@ -7,13 +7,17 @@ interface IContactFields {
   name: string
   email: string
   phone: string
-  message: string
+  address: string
+  city: string
+  state: string
+  zipcode: string
+  bestTime: string
 }
 
 const emailValidationRegex =
   /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/
 
-const ContactForm: React.FC = () => {
+const CreditRepairForm: React.FC = () => {
   const [submitted, setSubmitted] = useState(false)
 
   const onSubmit = async (data: IContactFields) => {
@@ -24,7 +28,7 @@ const ContactForm: React.FC = () => {
     }
 
     const response = await fetch(
-      `${process.env.GATSBY_FB_CONTACT_API_ENDPOINT} `,
+      `${process.env.GATSBY_FORMBUCKET_API_ENDPOINT} `,
       requestOptions,
     )
 
@@ -92,8 +96,33 @@ const ContactForm: React.FC = () => {
           </FormField>
         </div>
         <div className="col-12 position-relative">
-          <FormField error={errors.message}>
-            <textarea rows={5} {...register(`message`, { required: true })} />
+          <FormField error={errors.address}>
+            <input type="text" {...register(`address`, { required: true })} />
+          </FormField>
+        </div>
+        <div className="col-12 col-md-6 position-relative">
+          <FormField error={errors.city}>
+            <input type="text" {...register(`city`, { required: true })} />
+          </FormField>
+        </div>
+        <div className="col-6 col-md-3 position-relative">
+          <FormField error={errors.state}>
+            <input type="text" {...register(`state`, { required: true })} />
+          </FormField>
+        </div>
+        <div className="col-6 col-md-3 position-relative">
+          <FormField error={errors.zipcode}>
+            <input type="text" {...register(`zipcode`, { required: true })} />
+          </FormField>
+        </div>
+        <div className="col-12 position-relative">
+          <FormField error={errors.bestTime}>
+            <select {...register(`bestTime`, { required: true })}>
+              <option value="Early Morning">Early Morning</option>
+              <option value="Late Morning">Late Morning</option>
+              <option value="Early Afternoon">Early Afternoon</option>
+              <option value="Late Afternoon">Late Afternoon</option>
+            </select>
           </FormField>
         </div>
         <div className="col-12">{recaptchaComponent}</div>
@@ -122,4 +151,4 @@ const ContactForm: React.FC = () => {
   )
 }
 
-export default ContactForm
+export default CreditRepairForm

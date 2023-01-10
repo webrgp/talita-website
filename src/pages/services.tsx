@@ -1,4 +1,4 @@
-import { PageProps } from 'gatsby'
+import { Link, PageProps } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 
 import PageHeader from '../components/PageHeader'
@@ -130,6 +130,52 @@ const ServicesPage: React.FC<PageProps> = () => (
             operations, and corporate finance. Together, we can achieve
             extraordinary outcomes.
           </p>
+        </div>
+      </div>
+
+      <div className="row align-items-start align-items-lg-center my-5">
+        <div className="col-12 col-sm-5 col-md-3">
+          <StaticImage
+            src="../assets/images/credit-repair.jpg"
+            quality={100}
+            width={720}
+            aspectRatio={255 / 283}
+            loading="lazy"
+            formats={[`auto`, `webp`, `avif`]}
+            alt="Consulting"
+          />
+        </div>
+        <div className="col-12 col-sm-7 col-md-9">
+          <h3 className="mt-4 mt-sm-0">Credit Restoration</h3>
+          <p>
+            We understand how important your credit is for your future and we
+            are here to help you to achieve your financial goals. We work with
+            the credit bureaus and your creditors to challenge the negative
+            report items that affect your credit score. We have experts that can
+            assist you to improve your credit and score faster. Contact us for a
+            consultation and credit audit. We are here for you!
+          </p>
+          <div>
+            <Link to="/credit-restoration" className="btn btn-red">
+              Credit Restoration
+            </Link>
+            <a
+              href="https://www.smartcredit.com/?PID=12946"
+              className="btn btn-red"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Credit Monitoring
+            </a>
+            <a
+              href="https://self.inc/refer/15410699"
+              className="btn btn-red"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Secure Credit Card
+            </a>
+          </div>
         </div>
       </div>
     </div>

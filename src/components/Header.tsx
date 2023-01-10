@@ -1,19 +1,19 @@
-import { useState } from 'react'
-import { Link } from 'gatsby'
-import Particles from 'react-tsparticles'
-import { loadFull } from 'tsparticles'
+import { useState } from 'react';
+import { Link } from 'gatsby';
+import Particles from 'react-tsparticles';
+import { loadFull } from 'tsparticles';
 
-import LogoSVG from '../assets/images/talita-logo.svg'
-import Nav from './Nav'
+import LogoSVG from '../assets/images/tc-ps.svg';
+import Nav from './Nav';
 
-import '../assets/styles/Header.scss'
+import '../assets/styles/Header.scss';
 
 const Header: React.FC = () => {
-  const [isOpen, toggleOpen] = useState(false)
+  const [isOpen, toggleOpen] = useState(false);
 
   const particlesInit = async (main: any) => {
-    await loadFull(main)
-  }
+    await loadFull(main);
+  };
 
   return (
     <header className="Header">
@@ -50,7 +50,7 @@ const Header: React.FC = () => {
         </div>
       </nav>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
