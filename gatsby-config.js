@@ -7,7 +7,7 @@ module.exports = {
   siteMetadata: {
     title: `Talita Camilo Professional Services`,
     description: `Our firm provides individuals, families, and small to medium size businesses in all industries and professions with quality, affordable, personalized tax and professional services in your area.`,
-    author: `@talitacamilo`,
+    author: `@talitacamilo`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -17,8 +17,8 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/assets/images`,
-      },
+        path: `${__dirname}/src/assets/images`
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -31,8 +31,8 @@ module.exports = {
         background_color: `#B41733`,
         theme_color: `#B41733`,
         display: `minimal-ui`,
-        icon: `src/assets/images/favicon.png`, // This path is relative to the root of the site.
-      },
+        icon: `src/assets/images/favicon.png` // This path is relative to the root of the site.
+      }
     },
     {
       resolve: 'gatsby-source-prismic',
@@ -40,19 +40,19 @@ module.exports = {
         repositoryName: process.env.GATSBY_PRISMIC_REPO_NAME,
         accessToken: process.env.PRISMIC_ACCESS_TOKEN,
         customTypesApiToken: process.env.PRISMIC_CUSTOM_TYPES_API_TOKEN,
-        linkResolver,
-      },
+        linkResolver
+      }
     },
     {
       resolve: 'gatsby-plugin-prismic-previews',
       options: {
         repositoryName: process.env.GATSBY_PRISMIC_REPO_NAME,
-        accessToken: process.env.PRISMIC_ACCESS_TOKEN,
-      },
-    },
+        accessToken: process.env.PRISMIC_ACCESS_TOKEN
+      }
+    }
     // `gatsby-plugin-gatsby-cloud`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
-  ],
+  ]
 }

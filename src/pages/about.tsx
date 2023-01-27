@@ -22,9 +22,9 @@ const AboutPage: React.FC<PageProps> = () => (
     </PageHeader>
     <div className="container rich-text">
       <p>
-        Talita Camilo Professional Services provides individuals and small to
-        medium-size businesses in all industries with quality, affordable, and
-        personalized professional services and tax solutions.
+        TC Professional Services provides individuals and small to medium-size
+        businesses in all industries with quality, affordable, and personalized
+        professional services and tax solutions.
       </p>
       <p>
         <strong>
@@ -37,9 +37,9 @@ const AboutPage: React.FC<PageProps> = () => (
       </p>
       <p>
         Our high standards of service, and specialized team establishes the
-        difference between Talita Camilo Professional Services and the other
-        firms. You can trust us to absolve financial stress from your business
-        and personal finances matters.{` `}
+        difference between TC Professional Services and the other firms. You can
+        trust us to absolve financial stress from your business and personal
+        finances matters.{` `}
       </p>
     </div>
 

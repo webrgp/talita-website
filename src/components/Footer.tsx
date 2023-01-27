@@ -32,7 +32,7 @@ const Footer: React.FC = () => (
       <div className="Footer--top-row">
         <div className="Footer--logo">
           <Link to="/">
-            <img src={LogoSVG} alt="Talita Camilo Professional Services Logo" />
+            <img src={LogoSVG} alt="TC Professional Services Logo" />
           </Link>
         </div>
         <div className="Footer--social-links">
@@ -120,7 +120,7 @@ const Footer: React.FC = () => (
       </nav>
 
       <div className="copy">
-        &copy; {new Date().getFullYear()} Talita Camilo Professional Services
+        &copy; {new Date().getFullYear()} TC Professional Services
       </div>
     </div>
   </footer>
