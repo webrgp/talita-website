@@ -44,12 +44,31 @@ const TeamSection: React.FC = () => {
               />
               <h4>
                 Kellen Francescon
-                <small>Account Manager</small>
+                <small>Tax Preparer</small>
               </h4>
             </div>
           </div>
 
           <div className="col-6 col-lg-4">
+            <div className="TeamCard">
+              <StaticImage
+                src="../assets/images/kellen-francescon-profile.jpg"
+                quality={100}
+                width={640}
+                aspectRatio={1 / 1}
+                formats={[`auto`, `webp`, `avif`]}
+                loading="lazy"
+                placeholder="blurred"
+                alt="Eddie Herreraas Headshot"
+              />
+              <h4>
+                Eddie Herreraas
+                <small>Tax Preparer</small>
+              </h4>
+            </div>
+          </div>
+
+          {/* <div className="col-6 col-lg-4">
             <div className="TeamCard">
               <StaticImage
                 src="../assets/images/matheus-miranda-profile.jpg"
@@ -66,7 +85,7 @@ const TeamSection: React.FC = () => {
                 <small>Tax Manager</small>
               </h4>
             </div>
-          </div>
+          </div> */}
 
           <div className="col-6 col-lg-4">
             <div className="TeamCard">
@@ -87,7 +106,7 @@ const TeamSection: React.FC = () => {
             </div>
           </div>
 
-          <div className="col-6 col-lg-4">
+          {/* <div className="col-6 col-lg-4">
             <div className="TeamCard">
               <StaticImage
                 src="../assets/images/raquel-crepaldi-profile.jpg"
@@ -104,7 +123,7 @@ const TeamSection: React.FC = () => {
                 <small>Account Manager</small>
               </h4>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
