@@ -29,7 +29,7 @@ const services = [
     </p>`
   },
   {
-    title: `Taxes &amp; Tax Resolutions`,
+    title: `Taxes & Tax Resolutions`,
     Picture: () => (
       <StaticImage
         src="../assets/images/taxes.jpg"
@@ -96,38 +96,6 @@ const services = [
       operations, and corporate finance. Together, we can achieve
       extraordinary outcomes.
     </p>`
-  },
-  {
-    title: `Credit Restoration`,
-    Picture: () => (
-      <StaticImage
-        src="../assets/images/credit-repair.jpg"
-        quality={100}
-        width={720}
-        aspectRatio={255 / 283}
-        loading="lazy"
-        formats={[`auto`, `webp`, `avif`]}
-        alt="Consulting"
-      />
-    ),
-    html: `<p>
-      We understand how important your credit is for your future and we
-      are here to help you to achieve your financial goals. We work with
-      the credit bureaus and your creditors to challenge the negative
-      report items that affect your credit score. We have experts that can
-      assist you to improve your credit and score faster. Contact us for a
-      consultation and credit audit. We are here for you!
-    </p>`,
-    links: [
-      {
-        text: `Credit Restoration`,
-        url: `https://www.smartcredit.com/?PID=12946`
-      },
-      {
-        text: `Secure Credit Card`,
-        url: `https://self.inc/refer/15410699`
-      }
-    ]
   }
 ]
 
