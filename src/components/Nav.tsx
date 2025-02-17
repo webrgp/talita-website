@@ -1,20 +1,27 @@
-import React from "react"
 import { Link } from "gatsby"
+import React from "react"
 
-const navItems = [
+const defaultNavItems = [
   { url: `/about/`, title: `About Us` },
   { url: `/services/`, title: `Services` },
   // { url: `/blog/`, title: `Blog`},
   { url: `/contact/`, title: `Contact Us` },
-  { url: `http://talitacamilo.gettimely.com`, title: `Schedule a Visit` },
+  // { url: `http://talitacamilo.gettimely.com`, title: `Schedule a Visit` },
   { url: `https://talitacamilo.clientportal.com`, title: `Client Portal` },
 ]
 
 interface INav {
-  onLinkClick: any
+  onLinkClick: any,
+  additionalNavItems?: Array<{ url: string, title: string }>
 }
 
-const Nav: React.FC<INav> = ({ onLinkClick }) => {
+const Nav: React.FC<INav> = ({ onLinkClick, additionalNavItems }) => {
+
+  const navItems = [
+    ...defaultNavItems,
+    ...(additionalNavItems || []),
+  ]
+
   return (
     <ul className="navbar-nav justify-content-center">
       {navItems.map(item => (
