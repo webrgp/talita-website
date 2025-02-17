@@ -1,0 +1,265 @@
+{
+  "Main" : {
+    "hero_title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "label" : "Hero Title"
+      }
+    },
+    "hero_banner_picture" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : {
+          "width" : 1400,
+          "height" : 600
+        },
+        "thumbnails" : [ {
+          "name" : "Mobile",
+          "width" : 720,
+          "height" : 720
+        } ],
+        "label" : "Hero Banner Picture"
+      }
+    },
+    "body" : {
+      "type" : "Slices",
+      "fieldset" : "Slice zone",
+      "config" : {
+        "labels" : null,
+        "choices" : {
+          "featured_columns" : {
+            "type" : "Slice",
+            "fieldset" : "Featured Columns",
+            "description" : "Columns",
+            "icon" : "view_column",
+            "display" : "grid",
+            "non-repeat" : { },
+            "repeat" : {
+              "svg_icon" : {
+                "type" : "Link",
+                "config" : {
+                  "select" : "media",
+                  "label" : "SVG Icon"
+                }
+              },
+              "title" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading3",
+                  "label" : "Title"
+                }
+              },
+              "content" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph,strong,em,hyperlink",
+                  "allowTargetBlank" : true,
+                  "label" : "Content"
+                }
+              }
+            }
+          },
+          "services_grid" : {
+            "type" : "Slice",
+            "fieldset" : "Services Grid",
+            "description" : "Services Grid",
+            "icon" : "grid_on",
+            "display" : "list",
+            "non-repeat" : {
+              "title" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading2",
+                  "label" : "Title"
+                }
+              },
+              "intro" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph,strong,em,hyperlink",
+                  "allowTargetBlank" : true,
+                  "label" : "Intro"
+                }
+              },
+              "cta_button_text" : {
+                "type" : "Text",
+                "config" : {
+                  "label" : "CTA Button Text"
+                }
+              },
+              "cta_button_link" : {
+                "type" : "Link",
+                "config" : {
+                  "allowTargetBlank" : true,
+                  "label" : "CTA Button Link",
+                  "select" : null
+                }
+              }
+            },
+            "repeat" : {
+              "featured_services" : {
+                "type" : "Link",
+                "config" : {
+                  "select" : "document",
+                  "customtypes" : [ "services" ],
+                  "label" : "Featured Services"
+                }
+              }
+            }
+          },
+          "red_ribbon_cta" : {
+            "type" : "Slice",
+            "fieldset" : "Red Ribbon CTA",
+            "description" : "Red Ribbon CTA",
+            "icon" : "crop_7_5",
+            "display" : "list",
+            "non-repeat" : {
+              "content" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading3,strong,em",
+                  "label" : "Content"
+                }
+              },
+              "cta_button_text" : {
+                "type" : "Text",
+                "config" : {
+                  "label" : "CTA Button Text"
+                }
+              },
+              "cta_button_link" : {
+                "type" : "Link",
+                "config" : {
+                  "allowTargetBlank" : true,
+                  "label" : "CTA Button Link",
+                  "select" : null
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "testimonials" : {
+            "type" : "Slice",
+            "fieldset" : "Testimonials",
+            "description" : "Testimonials",
+            "icon" : "format_quote",
+            "display" : "list",
+            "non-repeat" : { },
+            "repeat" : {
+              "testimonial" : {
+                "type" : "Link",
+                "config" : {
+                  "select" : "document",
+                  "customtypes" : [ "testimonials" ],
+                  "label" : "Testimonial"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "Social Cards" : {
+    "seo_body" : {
+      "type" : "Slices",
+      "fieldset" : "Slice zone",
+      "config" : {
+        "choices" : {
+          "general_card" : {
+            "type" : "Slice",
+            "fieldset" : "General Card",
+            "description" : "General Social card for Facebook, LinkedIn, Google+, etc.",
+            "icon" : "art_track",
+            "non-repeat" : {
+              "title" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading1",
+                  "label" : "Title",
+                  "placeholder" : "Title..."
+                }
+              },
+              "description" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "paragraph",
+                  "label" : "Description",
+                  "placeholder" : "Description..."
+                }
+              },
+              "image" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : {
+                    "width" : 1200,
+                    "height" : 650
+                  },
+                  "thumbnails" : [ ],
+                  "label" : "Image"
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "twitter_card" : {
+            "type" : "Slice",
+            "fieldset" : "Twitter Card",
+            "description" : "Twitter summary card with image",
+            "icon" : "subtitles",
+            "non-repeat" : {
+              "card_type" : {
+                "type" : "Select",
+                "config" : {
+                  "options" : [ "Standard Summary Card", "Summary Card with Large Image" ],
+                  "default_value" : "Standard Summary Card",
+                  "label" : "Card type"
+                }
+              },
+              "twitter_handle" : {
+                "type" : "Text",
+                "config" : {
+                  "label" : "Twitter Handle",
+                  "placeholder" : "Twitter handle..."
+                }
+              },
+              "title" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "paragraph",
+                  "label" : "Title",
+                  "placeholder" : "Twitter Card Title..."
+                }
+              },
+              "description" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "paragraph",
+                  "label" : "Description",
+                  "placeholder" : "Twitter Card Description..."
+                }
+              },
+              "image" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : {
+                    "width" : 300,
+                    "height" : 300
+                  },
+                  "thumbnails" : [ {
+                    "name" : "large_image",
+                    "width" : 600,
+                    "height" : 314
+                  } ],
+                  "label" : "Image"
+                }
+              }
+            },
+            "repeat" : { }
+          }
+        }
+      }
+    }
+  }
+}

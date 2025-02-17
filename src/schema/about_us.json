@@ -1,0 +1,157 @@
+{
+  "Main" : {
+    "title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "label" : "Title"
+      }
+    },
+    "uid" : {
+      "type" : "UID",
+      "config" : {
+        "label" : "slug"
+      }
+    },
+    "cover_picture" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : {
+          "width" : 1400,
+          "height" : 600
+        },
+        "thumbnails" : [ {
+          "name" : "Mobile",
+          "width" : 720,
+          "height" : 720
+        } ],
+        "label" : "Cover Picture"
+      }
+    },
+    "intro_content" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph,heading2,heading3,heading4,heading5,strong,hyperlink,list-item,o-list-item",
+        "allowTargetBlank" : true,
+        "label" : "Intro Content"
+      }
+    },
+    "team_members" : {
+      "type" : "Group",
+      "config" : {
+        "fields" : {
+          "team_member" : {
+            "type" : "Link",
+            "config" : {
+              "select" : "document",
+              "customtypes" : [ "team_member" ],
+              "label" : "Team Member"
+            }
+          }
+        },
+        "label" : "Team Members"
+      }
+    }
+  },
+  "Social Cards" : {
+    "seo_body" : {
+      "type" : "Slices",
+      "fieldset" : "Slice zone",
+      "config" : {
+        "choices" : {
+          "general_card" : {
+            "type" : "Slice",
+            "fieldset" : "General Card",
+            "description" : "General Social card for Facebook, LinkedIn, Google+, etc.",
+            "icon" : "art_track",
+            "non-repeat" : {
+              "title" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading1",
+                  "label" : "Title",
+                  "placeholder" : "Title..."
+                }
+              },
+              "description" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "paragraph",
+                  "label" : "Description",
+                  "placeholder" : "Description..."
+                }
+              },
+              "image" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : {
+                    "width" : 1200,
+                    "height" : 650
+                  },
+                  "thumbnails" : [ ],
+                  "label" : "Image"
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "twitter_card" : {
+            "type" : "Slice",
+            "fieldset" : "Twitter Card",
+            "description" : "Twitter summary card with image",
+            "icon" : "subtitles",
+            "non-repeat" : {
+              "card_type" : {
+                "type" : "Select",
+                "config" : {
+                  "options" : [ "Standard Summary Card", "Summary Card with Large Image" ],
+                  "default_value" : "Standard Summary Card",
+                  "label" : "Card type"
+                }
+              },
+              "twitter_handle" : {
+                "type" : "Text",
+                "config" : {
+                  "label" : "Twitter Handle",
+                  "placeholder" : "Twitter handle..."
+                }
+              },
+              "title" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "paragraph",
+                  "label" : "Title",
+                  "placeholder" : "Twitter Card Title..."
+                }
+              },
+              "description" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "paragraph",
+                  "label" : "Description",
+                  "placeholder" : "Twitter Card Description..."
+                }
+              },
+              "image" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : {
+                    "width" : 300,
+                    "height" : 300
+                  },
+                  "thumbnails" : [ {
+                    "name" : "large_image",
+                    "width" : 600,
+                    "height" : 314
+                  } ],
+                  "label" : "Image"
+                }
+              }
+            },
+            "repeat" : { }
+          }
+        }
+      }
+    }
+  }
+}

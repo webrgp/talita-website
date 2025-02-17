@@ -1,0 +1,26 @@
+{
+  "Main" : {
+    "links" : {
+      "type" : "Group",
+      "config" : {
+        "fields" : {
+          "nav_text" : {
+            "type" : "Text",
+            "config" : {
+              "label" : "Nav Text"
+            }
+          },
+          "nav_link" : {
+            "type" : "Link",
+            "config" : {
+              "allowTargetBlank" : true,
+              "label" : "Nav Link",
+              "select" : null
+            }
+          }
+        },
+        "label" : "Links"
+      }
+    }
+  }
+}

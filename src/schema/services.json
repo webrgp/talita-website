@@ -1,0 +1,30 @@
+{
+  "Main" : {
+    "cover_picture" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : {
+          "width" : 255,
+          "height" : 283
+        },
+        "thumbnails" : [ ],
+        "label" : "Cover Picture"
+      }
+    },
+    "title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading3",
+        "label" : "Title"
+      }
+    },
+    "content" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "paragraph,strong,em,hyperlink",
+        "allowTargetBlank" : true,
+        "label" : "Content"
+      }
+    }
+  }
+}
