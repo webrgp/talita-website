@@ -1,11 +1,11 @@
 import { Link } from 'gatsby'
 
-import LogoSVG from '../assets/images/talita-logo-horizontal-white.svg'
-import FacebookSVG from '../assets/images/facebook-square-brands.svg'
-import LinkedInSVG from '../assets/images/linkedin-brands.svg'
-import InstagramSVG from '../assets/images/instagram-square-brands.svg'
 import AlignableSVG from '../assets/images/alignable-logo.svg'
+import FacebookSVG from '../assets/images/facebook-square-brands.svg'
+import InstagramSVG from '../assets/images/instagram-square-brands.svg'
+import LinkedInSVG from '../assets/images/linkedin-brands.svg'
 import MapMarkerSVG from '../assets/images/map-marker-alt-solid.svg'
+import LogoSVG from '../assets/images/talita-logo-horizontal-white.svg'
 
 import '../assets/styles/Footer.scss'
 import Nav from './Nav'
@@ -116,7 +116,9 @@ const Footer: React.FC = () => (
       </div>
 
       <nav>
-        <Nav onLinkClick={null} />
+        <Nav onLinkClick={null} additionalNavItems={[
+          { url: `/privacy-policy/`, title: `Privacy Policy` },
+        ]} />
       </nav>
 
       <div className="copy">
