@@ -32,3 +32,9 @@
 .btn + .btn {
   margin-left: 0.5rem;
 }
+
+.md-content {
+  table {
+    @extend .table;
+  }
+}
