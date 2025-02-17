@@ -40,6 +40,19 @@ module.exports = {
         repositoryName: process.env.GATSBY_PRISMIC_REPO_NAME,
         accessToken: process.env.PRISMIC_ACCESS_TOKEN,
         customTypesApiToken: process.env.PRISMIC_CUSTOM_TYPES_API_TOKEN,
+        schemas: {
+          blog_post: require('./src/schema/blog_post.json'),
+          team_member: require('./src/schema/team_member.json'),
+          testimonials: require('./src/schema/testimonials.json'),
+          homepage: require('./src/schema/homepage.json'),
+          services: require('./src/schema/services.json'),
+          pages: require('./src/schema/pages.json'),
+          about_us_page: require('./src/schema/about_us_page.json'),
+          services_page: require('./src/schema/services_page.json'),
+          about_us: require('./src/schema/about_us.json'),
+          contact_page: require('./src/schema/contact_page.json'),
+          main_nav: require('./src/schema/main_nav.json')
+        },
         linkResolver
       }
     },
