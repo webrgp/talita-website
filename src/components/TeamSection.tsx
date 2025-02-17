@@ -49,7 +49,7 @@ const TeamSection: React.FC = () => {
             </div>
           </div>
 
-          <div className="col-6 col-lg-4">
+          {/* <div className="col-6 col-lg-4">
             <div className="TeamCard">
               <StaticImage
                 src="../assets/images/kellen-francescon-profile.jpg"
@@ -66,7 +66,7 @@ const TeamSection: React.FC = () => {
                 <small>Tax Preparer</small>
               </h4>
             </div>
-          </div>
+          </div> */}
 
           {/* <div className="col-6 col-lg-4">
             <div className="TeamCard">
